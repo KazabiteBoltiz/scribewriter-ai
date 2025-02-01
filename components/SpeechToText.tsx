@@ -8,6 +8,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Mic, Globe, Scan } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
 import { CustomToast } from "./ui/custom-toast"
+import { GoogleSpeechResponse, GoogleSpeechResult } from "@/lib/google-speech"
 
 const GOOGLE_API_KEY = process.env.NEXT_PUBLIC_GOOGLE_API_KEY
 
@@ -70,7 +71,7 @@ export default function SpeechToTextTranslator() {
 
             const data = await response.json()
             if (data.results) {
-              setText(data.results.map((result: any) => result.alternatives[0].transcript).join(" "))
+              setText(data.results.map((result: GoogleSpeechResult) => result.alternatives[0].transcript).join(" "))
             } else {
               console.log("No transcription results:", data)
             }

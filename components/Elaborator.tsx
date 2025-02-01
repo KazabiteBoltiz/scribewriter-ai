@@ -19,7 +19,7 @@ const EnhancedElaboratorComp = () => {
   const [currentKeyword, setCurrentKeyword] = useState("")
   const [essay, setEssay] = useState("")
   const [loading, setLoading] = useState(false)
-  const [showToast, setShowToast] = useState<boolean>(false)
+  const [_, setShowToast] = useState<boolean>(false)
 
   const addKeyword = () => {
     if (currentKeyword && !keywords.includes(currentKeyword)) {
