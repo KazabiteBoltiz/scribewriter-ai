@@ -7,11 +7,11 @@ export interface GoogleSpeechResult {
     resultEndTime?: string;
   }
   
-  export interface GoogleSpeechResponse {
-    results?: GoogleSpeechResult[];
-    error?: {
-      code: number;
-      message: string;
-      status: string;
-    };
-  }
+//   export interface GoogleSpeechResponse {
+//     results?: GoogleSpeechResult[];
+//     error?: {
+//       code: number;
+//       message: string;
+//       status: string;
+//     };
+//   }

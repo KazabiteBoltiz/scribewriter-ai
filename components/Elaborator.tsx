@@ -19,7 +19,6 @@ const EnhancedElaboratorComp = () => {
   const [currentKeyword, setCurrentKeyword] = useState("")
   const [essay, setEssay] = useState("")
   const [loading, setLoading] = useState(false)
-  const [_, setShowToast] = useState<boolean>(false)
 
   const addKeyword = () => {
     if (currentKeyword && !keywords.includes(currentKeyword)) {
@@ -35,7 +34,6 @@ const EnhancedElaboratorComp = () => {
   const copyTextToClipboard = async () => {
     try {
       await navigator.clipboard.writeText(essay)
-      setShowToast(true)
     } catch (err) {
       console.error("Failed to copy text: ", err)
     }

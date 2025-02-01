@@ -8,7 +8,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Mic, Globe, Scan } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
 import { CustomToast } from "./ui/custom-toast"
-import { GoogleSpeechResponse, GoogleSpeechResult } from "@/lib/google-speech"
+import { GoogleSpeechResult } from "@/lib/google-speech"
 
 const GOOGLE_API_KEY = process.env.NEXT_PUBLIC_GOOGLE_API_KEY
 
