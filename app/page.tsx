@@ -15,7 +15,7 @@ export default function LandingPage() {
             <Mic className="stroke-grey-4 w-16 h-16 text-white-4 mb-4" />
             <h2 className="text-2xl font-bold text-grey-4 mb-2">Multilingual Mic</h2>
             <p className="text-grey-4">
-              Transcribe speech in multiple languages with our advanced speech recognition technology.
+              Transcribe speech in multiple languages with our speech recognition system.
             </p>
           </div>
         </Link>
@@ -25,14 +25,17 @@ export default function LandingPage() {
             <PenTool className="stroke-grey-4 w-16 h-16 text-white-4 mb-4" />
             <h2 className="text-2xl font-bold text-grey-4 mb-2">Elaborator</h2>
             <p className="text-grey-4">
-              Generate detailed passages based on your title and keywords. Perfect for content creation.
+              Generate passages based on your topic and keywords. Perfect for content creation.
             </p>
           </div>
         </Link>
       </div>
 
       <footer className="mt-16 text-white-3 text-center">
-        <p>*Team member names here*</p>
+        <p>Dhruv Jagadeesh</p>
+        <p>Adhithya Sriram Suresh</p>
+        <p>Atharv Sawarkar</p>
+        <p>Niraj Kumar</p>
       </footer>
     </div>
   )
