@@ -95,7 +95,7 @@ const EnhancedElaboratorComp = () => {
               </div>
               <motion.div layout className="flex flex-wrap gap-2">
                 <AnimatePresence>
-                  {keywords.map((keyword, index) => (
+                  {keywords.map((keyword) => (
                     <motion.span
                       key={keyword}
                       initial={{ opacity: 0, scale: 0.8 }}
