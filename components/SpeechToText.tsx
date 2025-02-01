@@ -2,13 +2,13 @@
 
 import { useState, useRef } from "react"
 import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
 import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@/components/ui/select"
 import { Card, CardContent } from "@/components/ui/card"
 import { Mic, Globe, Scan } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
 import { CustomToast } from "./ui/custom-toast"
-import { GoogleSpeechResult } from "@/lib/google-speech"
+import type { GoogleSpeechResult } from "@/lib/google-speech"
+import { Textarea } from "@/components/ui/textarea"
 
 const GOOGLE_API_KEY = process.env.NEXT_PUBLIC_GOOGLE_API_KEY
 
@@ -130,7 +130,7 @@ export default function SpeechToTextTranslator() {
       <motion.div
         initial={{ scale: 0.9 }}
         animate={{ scale: 1 }}
-        className = 'aspect-[1.5] items-center'
+        className="aspect-[1.5] items-center"
         transition={{ type: "spring", stiffness: 260, damping: 20 }}
       >
         <Card className="w-full items-center bg-white-4">
@@ -138,12 +138,12 @@ export default function SpeechToTextTranslator() {
             <div className="space-y-4">
               <div className="relative">
                 <motion.div initial={{ y: 10, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.2 }}>
-                  <Input
+                  <Textarea
                     disabled={true}
                     value={text}
                     onChange={(e) => setText(e.target.value)}
                     placeholder="Your speech appears here..."
-                    className="pr-10 bg-white-3 min-h-[100px] resize-none"
+                    className="pr-10 bg-white-3 h-[150px] max-h-[300px] overflow-y-auto resize-none"
                   />
                 </motion.div>
                 <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} className="absolute right-2 top-2">
